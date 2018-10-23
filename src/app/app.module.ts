@@ -7,10 +7,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { LoginComponent } from './components/login/login.component';
+import { AuthGuard } from './components/guards/auth.guard';
+
 
 const appRoutes: Routes = [
-  {path: 'dashboard' , component:
-  DashboardComponent
+  {path: '' , component:
+  DashboardComponent,
+    canActivate: [AuthGuard]
   },
   {path: 'login' , component:
   LoginComponent
@@ -38,7 +41,7 @@ const appRoutes: Routes = [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
