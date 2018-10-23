@@ -1,0 +1,50 @@
+<div class="dashboard">
+  <div class="sidebar j-sidebar active">
+    <div class="sidebar__inner">
+      <div class="sidebar__header">
+        <a href="https://quickblox.com/" class="dashboard__logo">
+          <img src="./../../../assets/qb-logo.svg" alt="QuickBlox">
+        </a>
+        <div class="dashboard__status_wrap">
+          <h2 class="dashboard__title"><%- user.user_tags %></h2>
+          <p class="dashboard__status j-dashboard_status">
+            Logged in as <%- user.name %>
+          </p>
+        </div>
+        <a href="#" class="logout j-logout">logout</a>
+      </div>
+      <div class="sidebar__content">
+        <ul class="sidebar__tabs">
+          <li class="sidebar__tab">
+            <a href="#" class="sidebar__tab_link j-sidebar__tab_link" data-type="chat">chats</a>
+          </li>
+          <li class="sidebar__tab">
+            <a href="#" class="sidebar__tab_link j-sidebar__tab_link" data-type="public">public chats</a>
+          </li>
+          <li class="sidebar__tab m-sidebar__tab_new">
+            <a href="#" class="sidebar__tab_link j-sidebar__create_dialog m-sidebar__tab_link_new" data-type="create">
+              <i class="material-icons">add_circle_outline</i>
+            </a>
+          </li>
+        </ul>
+        <ul class="sidebar__dilog_list j-sidebar__dilog_list">
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="content j-content">
+  </div>
+</div>
+
+<div class="content__title j-content__title j-welcome">
+  Welcome to QuickBlox chat sample!
+</div>
+<div class="notifications j-notifications hidden"></div>
+<div class="content__inner j-content__inner">
+  <div class="welcome__message">
+    <p>Please select you opponent to start chatting.</p>
+  </div>
+</div>
+
+
+
