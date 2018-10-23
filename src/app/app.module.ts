@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { LoginComponent } from './components/login/login.component';
 import { AuthGuard } from './components/guards/auth.guard';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 const appRoutes: Routes = [
@@ -22,11 +23,6 @@ const appRoutes: Routes = [
 ];
 
 
-
-
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +35,8 @@ const appRoutes: Routes = [
       {enableTracing: true}
       ),
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent]

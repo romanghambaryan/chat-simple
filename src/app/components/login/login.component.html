@@ -12,17 +12,15 @@
         </h3>
       </div>
 
-      <form name="loginForm" class="login__form">
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()"  class="login__form">
         <div class="login_form__row">
-          <label for="userName">User name</label>
-          <input type="text" id="userName" name="userName"/>
+          <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
         </div>
         <div class="login_form__row">
-          <label for="userGroup">User group</label>
-          <input type="text" id="userGroup" name="userGroup"/>
+          <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.usergroup.errors }" />
         </div>
         <div class="login__button_wrap">
-          <button type="submit" name="login_submit" class="btn m-login__button j-login__button" disabled>
+          <button type="submit" name="login_submit" class="btn m-login__button j-login__button" >
             login
           </button>
         </div>
