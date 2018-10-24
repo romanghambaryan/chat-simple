@@ -16,14 +16,17 @@ select:-moz-focusring {
   color: transparent;
   text-shadow: 0 0 0 #000;
 }
-
-body, html {
+body{
   height: 100%;
   width: 100%;
+}
+body, html {
+
   background-color: #f0f2f4;
   font-family: 'Roboto', sans-serif;
   overflow: hidden
 }
+
 
 #page {
   height: 100%;
