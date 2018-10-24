@@ -53,13 +53,11 @@ export class LoginComponent implements OnInit {
   onSubmit() {
     console.log('form submit clicked..');
     this.submitted = true;
-
+    console.log('form clicked..');
     // stop here if form is invalid
-    if (this.loginForm.invalid) {
-      return;
-    }
 
     this.loading = true;
     this.login(this.f.username.value, this.f.usergroup.value);
+
   }
 }
