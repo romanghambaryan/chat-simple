@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { first } from 'rxjs/operators';
+import {UsersService} from '../../services/users.service';
 
 
 
@@ -22,6 +23,7 @@ export class LoginComponent implements OnInit {
     private formBuilder: FormBuilder,
     private route: ActivatedRoute,
     private router: Router,
+    private users: UsersService,
   ) {
   }
 
@@ -54,6 +56,10 @@ export class LoginComponent implements OnInit {
     console.log('form submit clicked..');
     this.submitted = true;
     console.log('form clicked..');
+    console.log('Roman');
+    console.log(this.users.getUsers());
+    console.log(this.users.getUsers());
+    console.log('Roman');
     // stop here if form is invalid
 
     this.loading = true;

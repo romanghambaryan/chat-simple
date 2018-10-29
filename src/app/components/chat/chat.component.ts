@@ -1,5 +1,6 @@
 import { Component, ViewChild, ElementRef, OnInit, AfterViewInit } from '@angular/core';
 import { WebSocketSubject } from 'rxjs/observable/dom/WebSocketSubject';
+import {UsersService} from '../../services/users.service';
 
 export class Message {
   constructor(
@@ -26,7 +27,7 @@ export class ChatComponent implements AfterViewInit {
 
   private socket$: WebSocketSubject<Message>;
 
-  constructor() {
+  constructor(private users: UsersService) {
 
     this.socket$ = new WebSocketSubject('https://chat.quickblox.com:5281');
 
@@ -39,6 +40,7 @@ export class ChatComponent implements AfterViewInit {
   }
 
   ngAfterViewInit(): void {
+
     this.scroll();
   }
 
