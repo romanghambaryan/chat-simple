@@ -4,9 +4,6 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { first } from 'rxjs/operators';
 import {UsersService} from '../../services/users.service';
 
-
-
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',

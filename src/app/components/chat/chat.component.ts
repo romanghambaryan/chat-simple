@@ -23,7 +23,7 @@ export class ChatComponent implements AfterViewInit {
 
   public clientMessage = '';
   public isBroadcast = false;
-  public sender = '';
+  public sender = localStorage.getItem('currentUser');
 
   private socket$: WebSocketSubject<Message>;
 
